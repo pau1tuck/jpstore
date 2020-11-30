@@ -1,0 +1,8 @@
+{
+  "name": "jpstore",
+  "version": "1.0.0",
+  "description": "Jewel's Patterns",
+  "main": "index.js",
+  "author": "@pau1tuck",
+  "license": "MIT"
+}
