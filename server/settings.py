@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     'django_filters',
     'graphql_jwt.refresh_token.apps.RefreshTokenConfig',
     'server.users',
+    'server.products',
+    'client'
 ]
 
 MIDDLEWARE = [
