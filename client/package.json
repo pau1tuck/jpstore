@@ -1,8 +1,29 @@
 {
-  "name": "jpstore",
-  "version": "1.0.0",
-  "description": "Jewel's Patterns",
-  "main": "index.js",
-  "author": "@pau1tuck",
-  "license": "MIT"
+    "name": "jpstore",
+    "version": "1.0.0",
+    "description": "Jewel's Patterns",
+    "main": "static/client/index.js",
+    "author": "@pau1tuck",
+    "license": "MIT",
+    "scripts": {
+        "gen": "graphql-codegen --config codegen.yml",
+        "compile": "tsc -w",
+        "dev": "esbuild src/index.tsx --bundle '--define:process.env.NODE_ENV=\"development\"' --outfile=static/client/index.js --color=true",
+        "build": "esbuild src/index.tsx --bundle '--define:process.env.NODE_ENV=\"production\"' --minify --outfile=static/client/index.js"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.13.0",
+        "@typescript-eslint/parser": "^4.13.0",
+        "esbuild": "^0.8.32",
+        "eslint": "^7.18.0",
+        "eslint-config-airbnb-typescript": "^12.0.0",
+        "eslint-config-prettier": "^7.1.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.3.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-react": "^7.22.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "prettier": "^2.2.1",
+        "typescript": "^4.1.3"
+    }
 }
